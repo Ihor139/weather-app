@@ -1,0 +1,346 @@
+<% var data={ title: 'Weather' , date: '10-07-2021' , location: 'Zhytomyr' ,
+  weatherIconSmall: './assets/icons/rain.svg alt="fog"' ,
+  weatherIconLarge: './assets/icons/thunderstorm.svg alt="thunderstorm"' , temperature: '28' , feelTemperature: '30' ,
+  humidity: '50' , airPressure: '1009.545' , rain: '50' , windSpeed: '1.4' , nameWeather: 'thunderstorm' ,
+  unitsMeasurementTemperature: '°C' , unitsMeasurementSpeed: 'km/h' , }; %>
+
+  <%= _.template(require('./../includes/header.html'))(data) %>
+
+    <div class="content">
+      <div class="container">
+        <div class="app__wrapper">
+          <div class="app__top">
+            <div class="app__cart app__cart-detail">
+              <div class="app__cart-inner">
+                <div class="app__cart-info">
+                  <div class="app__cart-current-time">
+                    12:00 <!--(current time)-->
+                  </div>
+                  <div class="app__cart-ico">
+                    <img src=<%=data.weatherIconSmall%> />
+                  </div>
+
+                  <div class="app__cart-weather">
+                    <%=data.nameWeather%>
+                  </div>
+
+                  <div class="app__cart-location-current">
+                    <%=data.location%>
+                  </div>
+                </div>
+
+                <div class="app__cart-number">
+                  <span class="app__cart-number-item">
+                    <%=data.temperature%>
+                  </span>
+                  <span class="app__cart-number-measurement">
+                    <%=data.unitsMeasurementTemperature%>
+                  </span>
+                </div>
+                <div class="app__cart-location-change">
+                  <div class="app__cart-location-change-button">
+                    <div class="app__cart-location-change-ico">
+                      <img src="./assets/icons/location.svg" alt="location" />
+                    </div>
+                    <form action="#">
+                      <input class="app__cart-location-change-text" placeholder="Change location" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="app__weather-info">
+              <div class="app__weather-ico">
+                <img src=<%=data.weatherIconLarge%>/>
+              </div>
+              <div class="app__weather-title">
+                THUNDERSTORM
+              </div>
+            </div>
+
+            <div class="app__cart app__cart-detail">
+              <div class="app__cart-item">
+                <div class="app__cart-item-ico">
+                  <img src="./assets/icons/humidity.svg" alt="humidity" />
+                </div>
+                <div class="app__cart-item-text">
+                  <div class="app__cart-item-name">Humidity</div>
+                  <div class="app__cart-item-number">
+                    <%=data.humidity%>%
+                  </div>
+                </div>
+              </div>
+              <div class="app__cart-item">
+                <div class="app__cart-item-ico">
+                  <img src="./assets/icons/airPressure.svg" alt="airPressure" />
+                </div>
+                <div class="app__cart-item-text">
+                  <div class="app__cart-item-name">Air Pressure</div>
+                  <div class="app__cart-item-number">
+                    <%=data.airPressure%>PS
+                  </div>
+                </div>
+              </div>
+              <div class="app__cart-item">
+                <div class="app__cart-item-ico">
+                  <img src="./assets/icons/rain.svg" alt="rain" />
+                </div>
+                <div class="app__cart-item-text">
+                  <div class="app__cart-item-name">Chance of Rain</div>
+                  <div class="app__cart-item-number">
+                    <%=data.rain%>%
+                  </div>
+                </div>
+              </div>
+              <div class="app__cart-item">
+                <div class="app__cart-item-ico">
+                  <img src="./assets/icons/wind.svg" alt="wind" />
+                </div>
+                <div class="app__cart-item-text">
+                  <div class="app__cart-item-name">Wind Speed</div>
+                  <div class="app__cart-item-number">
+                    <%=data.windSpeed%>
+                    <div class="app__cart-item-measurement">
+                      <%=data.unitsMeasurementSpeed%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app__bottom">
+            <div class="app__bottom-inner">
+
+              <div class="app__cart app__cart-detail--small">
+                <div class="app__cart-inner">
+                  <div class="app__cart-info">
+                    <div class="app__cart-date">
+                      11-07-2021
+                    </div>
+                    <div class="app__cart-ico">
+                      <img src=<%=data.weatherIconSmall%> />
+                    </div>
+                    <div class="app__cart-weather">
+                      <%=data.nameWeather%>
+                    </div>
+                  </div>
+                  <div class="app__cart-number">
+                    <span class="app__cart-number-item">
+                      <%=data.temperature%>
+                    </span>
+                    <span class="app__cart-number-measurement">
+                      <%=data.unitsMeasurementTemperature%>
+                    </span>
+                  </div>
+                  <div class="app__cart-feel">
+                    <span class="app__cart-text">
+                      Feels like
+                    </span>
+                    <span class="app__cart-number--small">
+                      <%=data.feelTemperature%>°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app__cart app__cart-detail--small">
+                <div class="app__cart-inner">
+                  <div class="app__cart-info">
+                    <div class="app__cart-date">
+                      11-07-2021
+                    </div>
+                    <div class="app__cart-ico">
+                      <img src=<%=data.weatherIconSmall%> />
+                    </div>
+                    <div class="app__cart-weather">
+                      <%=data.nameWeather%>
+                    </div>
+                  </div>
+                  <div class="app__cart-number">
+                    <span class="app__cart-number-item">
+                      <%=data.temperature%>
+                    </span>
+                    <span class="app__cart-number-measurement">
+                      <%=data.unitsMeasurementTemperature%>
+                    </span>
+                  </div>
+                  <div class="app__cart-feel">
+                    <span class="app__cart-text">
+                      Feels like
+                    </span>
+                    <span class="app__cart-number--small">
+                      <%=data.feelTemperature%>°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app__cart app__cart-detail--small">
+                <div class="app__cart-inner">
+                  <div class="app__cart-info">
+                    <div class="app__cart-date">
+                      11-07-2021
+                    </div>
+                    <div class="app__cart-ico">
+                      <img src=<%=data.weatherIconSmall%> />
+                    </div>
+                    <div class="app__cart-weather">
+                      <%=data.nameWeather%>
+                    </div>
+                  </div>
+                  <div class="app__cart-number">
+                    <span class="app__cart-number-item">
+                      <%=data.temperature%>
+                    </span>
+                    <span class="app__cart-number-measurement">
+                      <%=data.unitsMeasurementTemperature%>
+                    </span>
+                  </div>
+                  <div class="app__cart-feel">
+                    <span class="app__cart-text">
+                      Feels like
+                    </span>
+                    <span class="app__cart-number--small">
+                      <%=data.feelTemperature%>°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app__cart app__cart-detail--small">
+                <div class="app__cart-inner">
+                  <div class="app__cart-info">
+                    <div class="app__cart-date">
+                      11-07-2021
+                    </div>
+                    <div class="app__cart-ico">
+                      <img src=<%=data.weatherIconSmall%> />
+                    </div>
+                    <div class="app__cart-weather">
+                      <%=data.nameWeather%>
+                    </div>
+                  </div>
+                  <div class="app__cart-number">
+                    <span class="app__cart-number-item">
+                      <%=data.temperature%>
+                    </span>
+                    <span class="app__cart-number-measurement">
+                      <%=data.unitsMeasurementTemperature%>
+                    </span>
+                  </div>
+                  <div class="app__cart-feel">
+                    <span class="app__cart-text">
+                      Feels like
+                    </span>
+                    <span class="app__cart-number--small">
+                      <%=data.feelTemperature%>°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app__cart app__cart-detail--small">
+                <div class="app__cart-inner">
+                  <div class="app__cart-info">
+                    <div class="app__cart-date">
+                      11-07-2021
+                    </div>
+                    <div class="app__cart-ico">
+                      <img src=<%=data.weatherIconSmall%> />
+                    </div>
+                    <div class="app__cart-weather">
+                      <%=data.nameWeather%>
+                    </div>
+                  </div>
+                  <div class="app__cart-number">
+                    <span class="app__cart-number-item">
+                      <%=data.temperature%>
+                    </span>
+                    <span class="app__cart-number-measurement">
+                      <%=data.unitsMeasurementTemperature%>
+                    </span>
+                  </div>
+                  <div class="app__cart-feel">
+                    <span class="app__cart-text">
+                      Feels like
+                    </span>
+                    <span class="app__cart-number--small">
+                      <%=data.feelTemperature%>°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app__cart app__cart-detail--small">
+                <div class="app__cart-inner">
+                  <div class="app__cart-info">
+                    <div class="app__cart-date">
+                      11-07-2021
+                    </div>
+                    <div class="app__cart-ico">
+                      <img src=<%=data.weatherIconSmall%> />
+                    </div>
+                    <div class="app__cart-weather">
+                      <%=data.nameWeather%>
+                    </div>
+                  </div>
+                  <div class="app__cart-number">
+                    <span class="app__cart-number-item">
+                      <%=data.temperature%>
+                    </span>
+                    <span class="app__cart-number-measurement">
+                      <%=data.unitsMeasurementTemperature%>
+                    </span>
+                  </div>
+                  <div class="app__cart-feel">
+                    <span class="app__cart-text">
+                      Feels like
+                    </span>
+                    <span class="app__cart-number--small">
+                      <%=data.feelTemperature%>°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app__cart app__cart-detail--small">
+                <div class="app__cart-inner">
+                  <div class="app__cart-info">
+                    <div class="app__cart-date">
+                      11-07-2021
+                    </div>
+                    <div class="app__cart-ico">
+                      <img src=<%=data.weatherIconSmall%> />
+                    </div>
+                    <div class="app__cart-weather">
+                      <%=data.nameWeather%>
+                    </div>
+                  </div>
+                  <div class="app__cart-number">
+                    <span class="app__cart-number-item">
+                      <%=data.temperature%>
+                    </span>
+                    <span class="app__cart-number-measurement">
+                      <%=data.unitsMeasurementTemperature%>
+                    </span>
+                  </div>
+                  <div class="app__cart-feel">
+                    <span class="app__cart-text">
+                      Feels like
+                    </span>
+                    <span class="app__cart-number--small">
+                      <%=data.feelTemperature%>°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= _.template(require('./../includes/footer.html'))(data) %>

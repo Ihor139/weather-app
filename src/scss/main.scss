@@ -1,0 +1,24 @@
+@import "app";
+@import "reset";
+@import "mixins";
+
+*{
+  font-family: 'MavenPro';
+  line-height: normal;
+  color: #fff;
+}
+
+.content {
+  background-color: #c4c4c4;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 15px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1730px;
+  margin: 0 auto;
+  overflow: hidden;
+}

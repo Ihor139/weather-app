@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'MavenPro';
+  src: url("../assets/fonts/MavenPro-Regular.ttf")
+  format('truetype');
+}
+@font-face {
+  font-family: 'MavenProMedium';
+  src: url("../assets/fonts/MavenPro-Medium.ttf")
+  format('truetype');
+}
+@font-face {
+  font-family: 'MavenProBold';
+  src: url("../assets/fonts/MavenPro-Bold.ttf")
+  format('truetype');
+}
