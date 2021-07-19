@@ -9,3 +9,6 @@ import './assets/img/humidity.svg'
 import './assets/img/rain.svg'
 import './assets/img/wind.svg'
 import './assets/img/airPressure.svg'
+
+
+import './js/fetch'
