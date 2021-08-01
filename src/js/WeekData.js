@@ -9,7 +9,7 @@ export class WeekData {
       today.push(list[i])
       delete list[i]
     }
-
+ 
     let dayList = []
     let newDayData = []
     let dayData
