@@ -11,4 +11,4 @@ import './assets/img/wind.svg'
 import './assets/img/airPressure.svg'
 
 
-import './js/fetch'
+import './js/App'

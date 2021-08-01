@@ -1,25 +1,38 @@
-const data = new Data();
-const ui = new UI();
+import { Data } from './Data'
+import { UI } from './UI'
+import { WeekData } from './WeekData'
+import { LocalStorage } from './LocalStorage'
 
-console.log(data.getData());
-// const search = document.querySelector(".app__cart-location-change-text");
+const data = new Data()
+const ui = new UI()
+const ls = new LocalStorage()
+const wd = new WeekData()
 
-// search.addEventListener("keyup", (e) => {
-//   if (e.keyCode === 13) {
-//     const newCity = search.value;
+const search = document.querySelector(".app__cart-location-change-text")
 
-    // data.getData(newCity).then((data) => {
-    //   console.log(data);
-      // ui.createTodayCard(dataToday);
-      // ui.saveToLS(data);
-    // });
-//   }
-// });
+search.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    const city = search.value;
 
-//event listener for local storage
+    data.getData(city).then((data) => {
+      ui.createTodayCard(data)
+      ui.createDetailCard(data)
+      ui.createWeatherInfo(data)
+      ls.saveToLS(data)
+      ui.createWeek(wd.getDataDay(data))
+    });
+    // search.value = ''
+  }
+});
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   const dataSaved = ui.getFromLS();
-//   ui.populateUI(dataSaved);
-// });
+// event listener for local storage
+
+window.addEventListener("DOMContentLoaded", () => {
+  const dataSaved = ls.getFromLS()
+  const dataSavedWeek = ls.getFromLS()
+  ui.createTodayCard(dataSaved)
+  ui.createDetailCard(dataSaved)
+  ui.createWeatherInfo(dataSaved)
+  ui.createWeek(wd.getDataDay(dataSavedWeek))
+});
 
